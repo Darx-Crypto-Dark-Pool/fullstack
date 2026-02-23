@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Database (schema/migrations — keep local only, do not commit)
+database/
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime
+dist/
+out/
+# backend/build/ is kept — contains circuit wasm/zkey for proof generation (copy from root build/)
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Snark/ZK artifacts (generated circuits, proofs)
+*.wtns
+*.ptau
+proofs/
+*.zkey
+# Allow .zkey inside backend/build/ for deployment
+!build/*.zkey
+
+# Optional: uncomment if you use
+# coverage/
+# .nyc_output/
